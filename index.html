@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kemenbud Cultural Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "gold-accent": "#B8860B",
+                        "secondary": "#7b581e",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-container": "#ffd08a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4fc",
+                        "tertiary-fixed": "#ffdad9",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-background": "#161c22",
+                        "surface-container-high": "#e3e9f0",
+                        "on-tertiary-fixed": "#350e10",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#737780",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "success-green": "#28A745",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "surface-gray": "#F8F9FA",
+                        "primary-container": "#003366",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ecf1f9",
+                        "secondary-fixed-dim": "#edbf7a",
+                        "tertiary": "#391112",
+                        "surface-variant": "#dde3eb",
+                        "on-primary-container": "#799dd6",
+                        "surface-dim": "#d5dae2",
+                        "surface-cream": "#FCF7F0",
+                        "primary-fixed": "#d5e3ff",
+                        "primary": "#001e40",
+                        "on-secondary-fixed": "#281800",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "surface-tint": "#3a5f94",
+                        "background": "#f7f9ff",
+                        "surface": "#f7f9ff",
+                        "tertiary-container": "#532526",
+                        "error-red": "#DC3545",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface-variant": "#43474f",
+                        "on-secondary-container": "#7a571d",
+                        "secondary-fixed": "#ffddb0",
+                        "on-secondary-fixed-variant": "#604106",
+                        "inverse-surface": "#2b3137",
+                        "surface-container-highest": "#dde3eb",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001b3c",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161c22",
+                        "on-tertiary-container": "#cb8a89",
+                        "surface-container": "#e9eef6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["DM Serif Display", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "headline-lg": ["DM Serif Display", "serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["DM Serif Display", "serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-primary text-gold-accent sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 border-b-2 border-gold-accent">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
+</div>
+<ul class="hidden md:flex items-center gap-8 font-label-md text-label-md">
+<li class="text-gold-accent border-b-2 border-gold-accent pb-1 cursor-pointer">Beranda</li>
+<li class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">Statistik</li>
+<li class="relative group cursor-pointer">
+    <div class="flex items-center gap-1 text-white opacity-90 group-hover:opacity-100 group-hover:text-gold-accent transition-colors duration-200">
+        <span class="">Data Program</span>
+        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+    </div>
+    <div class="absolute top-full left-0 mt-2 w-64 bg-primary border border-gold-accent rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <div class="flex flex-col py-2">
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Manajemen Talenta Nasional (MTN)</a>
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Bimtek Pelaku Budaya</a>
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Gita Bahana Nusantara (GBN)</a>
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Anugerah Kebudayaan Indonesia (AKI)</a>
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Penguatan Kelembagaan</a>
+            <a href="#" class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors">Pemajuan Kebudayaan Desa</a>
+        </div>
+    </div>
+</li>
+<li class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">Tentang</li>
+</ul>
+<div class="flex items-center gap-4">
+<button class="bg-gold-accent text-primary px-4 py-2 rounded font-label-md text-label-md hover:bg-secondary-container transition-colors">Masuk</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full max-w-container-max px-margin-mobile md:px-margin-desktop py-12 md:py-24 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 flex flex-col gap-6">
+<h1 class="font-display-lg text-display-lg text-primary">Portal Budaya <span class="text-gold-accent">Nasional</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Sistem informasi terpusat untuk pendataan, pemantauan, dan evaluasi program kebudayaan di seluruh Indonesia. Terpercaya, terintegrasi, dan transparan.
+                </p>
+<div class="pt-4">
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                        Masuk ke Database
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full h-80 rounded-xl overflow-hidden relative shadow-sm border border-outline-variant bg-surface-gray">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A highly professional and clean digital rendering of a modern cultural heritage exhibition space. The room features subtle Indonesian motifs integrated into sleek, minimalist architecture with a navy blue and gold color palette. Lighting is soft, high-key, and museum-quality, illuminating interactive data displays and cultural artifacts. The mood is sophisticated, authoritative, and deeply rooted in modern government institutional design." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzQFr1cJMegapXV7oc5I6gAAOqS2nRHi3qJMcnXQ1tuyWjOXnUdxXWPJWN_7LaMGefjhQM-73N8dqmjctDdrT6-_u2LrEWqXcHH6pv_GKeEk6Ygb-kjOaclvFErBzpjpAys_--iLAwqvm5hE6I18rF78Ty8sQ59DWFf61dRmXUQbcntdbiwSWu0xFaJg3155dS4kgIa72o9Rm6RpoRAw2OqSe69GnM3J65ZFa1pIvJHWLo9F7-1Rcd')"></div>
+</div>
+</section>
+<!-- Program Highlights Bento Grid -->
+<section class="w-full max-w-container-max px-margin-mobile md:px-margin-desktop py-12 bg-surface-gray border-t border-outline-variant w-full">
+<div class="mb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Program <span class="text-gold-accent">Unggulan</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Inisiatif strategis kementerian untuk pemajuan kebudayaan.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">MTN</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Maestro Seni Tradisi Nusantara. Program apresiasi dan dukungan untuk pewaris seni tradisi langka.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">Bimtek</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Bimbingan Teknis Tenaga Kebudayaan. Peningkatan kapasitas SDM kebudayaan daerah.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="museum">museum</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">GBN</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Galeri Budaya Nasional. Platform dokumentasi dan pameran digital cagar budaya.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">AKI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Anugerah Kebudayaan Indonesia. Penghargaan tertinggi pemerintah bagi tokoh kebudayaan.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">Kelembagaan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Fasilitasi Organisasi Kebudayaan. Bantuan operasional dan program untuk sanggar dan yayasan seni.</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white p-6 rounded-xl border border-outline-variant hover:shadow-[0_8px_30px_rgb(0,0,0,0.05)] transition-all duration-300 group cursor-pointer flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-gold-accent">
+<span class="material-symbols-outlined" data-icon="nature_people">nature_people</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-gold-accent transition-colors">Desa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Pemajuan Kebudayaan Desa. Pemberdayaan masyarakat desa berbasis kearifan lokal.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter border-t-4 border-gold-accent text-white">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-white">KEMENBUD</span>
+<p class="font-body-md text-body-md text-surface-variant">© 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p>
+</div>
+<div class="flex flex-col gap-2 font-label-sm text-label-sm">
+<a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Latar Belakang</a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">FAQ</a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Hubungi Kami</a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Peta Situs</a>
+</div>
+<div class="flex justify-start md:justify-end items-start gap-4 text-gold-accent">
+<!-- Placeholder for social icons -->
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors" data-icon="mail">mail</span>
+</div>
+</footer>
+
+
+</body></html>
