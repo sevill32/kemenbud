@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masuk - Portal Kebudayaan Kemenbud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "gold-accent": "#B8860B",
+                        "secondary": "#7b581e",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-container": "#ffd08a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4fc",
+                        "tertiary-fixed": "#ffdad9",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-background": "#161c22",
+                        "surface-container-high": "#e3e9f0",
+                        "on-tertiary-fixed": "#350e10",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#737780",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "success-green": "#28A745",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "surface-gray": "#F8F9FA",
+                        "primary-container": "#003366",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ecf1f9",
+                        "secondary-fixed-dim": "#edbf7a",
+                        "tertiary": "#391112",
+                        "surface-variant": "#dde3eb",
+                        "on-primary-container": "#799dd6",
+                        "surface-dim": "#d5dae2",
+                        "surface-cream": "#FCF7F0",
+                        "primary-fixed": "#d5e3ff",
+                        "primary": "#001e40",
+                        "on-secondary-fixed": "#281800",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "surface-tint": "#3a5f94",
+                        "background": "#f7f9ff",
+                        "surface": "#f7f9ff",
+                        "tertiary-container": "#532526",
+                        "error-red": "#DC3545",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface-variant": "#43474f",
+                        "on-secondary-container": "#7a571d",
+                        "secondary-fixed": "#ffddb0",
+                        "on-secondary-fixed-variant": "#604106",
+                        "inverse-surface": "#2b3137",
+                        "surface-container-highest": "#dde3eb",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001b3c",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161c22",
+                        "on-tertiary-container": "#cb8a89",
+                        "surface-container": "#e9eef6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["DM Serif Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["DM Serif Display"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["DM Serif Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar Suppressed for Login (Transactional) -->
+<main class="flex-grow flex items-center justify-center p-margin-mobile md:p-margin-desktop bg-surface-gray">
+<div class="w-full max-w-[1000px] flex flex-col md:flex-row bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+<!-- Left Side: Image / Branding -->
+<div class="md:w-1/2 relative hidden md:block">
+<div class="absolute inset-0 bg-primary opacity-80 z-10 mix-blend-multiply"></div>
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A grand, wide-angle photograph of an ancient Indonesian temple complex during golden hour. The sunlight casts long shadows, emphasizing the intricate stone carvings. The scene is bathed in warm gold and deep navy tones, aligning with a formal, government aesthetic. The overall mood is majestic, timeless, and culturally significant, with high resolution and sharp details." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCB5kBKnHX-hyixbY5ckXuEGzx2jZ5xR9snPQDKpgqmybUN8MAikyQcSXoZ_MDNgmb9HffjKkjnx1pDFaj6gNQyTa4dRzxj58E-uuT3rd_4xv2wLlltqHFmS-RHML-qTqWceBgvEcyWMNmZLH8SBscpZTbjtdCySOoPGjuGmJDc38r11YQ8BhN7Mwp54Nerwb17QmzHAW-BJETb43NwfZ-V8KKctpTfXlmrA6rBLe6R74CeRJdiwqZt')"></div>
+<div class="relative z-20 h-full flex flex-col justify-center items-center p-12 text-center text-white">
+<span class="material-symbols-outlined text-[64px] mb-6 text-gold-accent">museum</span>
+<h2 class="font-display-lg text-display-lg mb-4">KEMENBUD</h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface opacity-90 max-w-md">
+                        Melestarikan dan memajukan kebudayaan bangsa melalui data dan pengelolaan informasi yang terpadu.
+                    </p>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+<div class="mb-8 text-center md:text-left">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Masuk ke Portal Kebudayaan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Silakan masukkan kredensial Anda untuk melanjutkan.</p>
+</div>
+<form class="space-y-6">
+<!-- Role Selection -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface">Pilih Peran</label>
+<div class="grid grid-cols-3 gap-2 p-1 bg-surface-container rounded-lg">
+<label class="cursor-pointer text-center relative">
+<input checked="" class="peer sr-only" name="role" type="radio" value="user"/>
+<div class="py-2 px-3 rounded text-on-surface-variant peer-checked:bg-primary peer-checked:text-white peer-checked:font-semibold transition-colors font-label-md text-label-md">
+                                    User
+                                </div>
+</label>
+<label class="cursor-pointer text-center relative">
+<input class="peer sr-only" name="role" type="radio" value="validator"/>
+<div class="py-2 px-3 rounded text-on-surface-variant peer-checked:bg-primary peer-checked:text-white peer-checked:font-semibold transition-colors font-label-md text-label-md">
+                                    Validator
+                                </div>
+</label>
+<label class="cursor-pointer text-center relative">
+<input class="peer sr-only" name="role" type="radio" value="admin"/>
+<div class="py-2 px-3 rounded text-on-surface-variant peer-checked:bg-primary peer-checked:text-white peer-checked:font-semibold transition-colors font-label-md text-label-md">
+                                    Admin
+                                </div>
+</label>
+</div>
+</div>
+<!-- Email/Username -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface block" for="username">Email / Username</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">person</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-colors font-body-md text-body-md" id="username" placeholder="Masukkan email atau username" type="text"/>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface block" for="password">Kata Sandi</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-outline-variant rounded bg-surface-container-lowest text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-colors font-body-md text-body-md" id="password" placeholder="Masukkan kata sandi" type="password"/>
+</div>
+<div class="flex justify-end mt-1">
+<a class="font-label-sm text-label-sm text-primary hover:text-gold-accent transition-colors" href="#">Lupa Kata Sandi?</a>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3 px-4 bg-primary text-white font-label-md text-label-md rounded flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+<span>Masuk</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer Component from JSON -->
+<footer class="w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter bg-primary dark:bg-primary-container border-t-4 border-gold-accent">
+<div class="flex flex-col gap-4">
+<h3 class="font-headline-md text-headline-md text-white">KEMENBUD</h3>
+<p class="font-label-sm text-label-sm text-surface-variant">© 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-gold-accent font-bold mb-2">Tautan Penting</h4>
+<ul class="flex flex-col gap-2 font-body-md text-body-md">
+<li><a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Latar Belakang</a></li>
+<li><a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-gold-accent font-bold mb-2">Bantuan</h4>
+<ul class="flex flex-col gap-2 font-body-md text-body-md">
+<li><a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Hubungi Kami</a></li>
+<li><a class="text-surface-variant hover:text-white hover:underline transition-all" href="#">Peta Situs</a></li>
+</ul>
+</div>
+</footer>
+</body></html>
