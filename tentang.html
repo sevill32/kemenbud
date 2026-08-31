@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tambah Data Media Kebudayaan - KEMENBUD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#d5e3ff",
+                    "on-primary-container": "#799dd6",
+                    "on-secondary-container": "#7a571d",
+                    "tertiary-fixed-dim": "#fbb5b3",
+                    "error": "#ba1a1a",
+                    "background": "#f7f9ff",
+                    "secondary": "#7b581e",
+                    "error-red": "#DC3545",
+                    "on-surface": "#161c22",
+                    "surface-dim": "#d5dae2",
+                    "on-secondary-fixed": "#281800",
+                    "surface": "#f7f9ff",
+                    "surface-container-high": "#e3e9f0",
+                    "on-tertiary-fixed-variant": "#6a3838",
+                    "secondary-fixed": "#ffddb0",
+                    "inverse-surface": "#2b3137",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#3a5f94",
+                    "tertiary-fixed": "#ffdad9",
+                    "outline": "#737780",
+                    "secondary-container": "#ffd08a",
+                    "inverse-on-surface": "#ecf1f9",
+                    "on-primary-fixed": "#001b3c",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#003366",
+                    "on-secondary-fixed-variant": "#604106",
+                    "surface-container-highest": "#dde3eb",
+                    "gold-accent": "#B8860B",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-container": "#e9eef6",
+                    "surface-variant": "#dde3eb",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c3c6d1",
+                    "surface-gray": "#F8F9FA",
+                    "tertiary": "#391112",
+                    "surface-cream": "#FCF7F0",
+                    "on-background": "#161c22",
+                    "on-error-container": "#93000a",
+                    "primary": "#001e40",
+                    "surface-container-low": "#eff4fc",
+                    "on-primary-fixed-variant": "#1f477b",
+                    "on-surface-variant": "#43474f",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#a7c8ff",
+                    "on-tertiary-fixed": "#350e10",
+                    "on-tertiary-container": "#cb8a89",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#532526",
+                    "surface-bright": "#f7f9ff",
+                    "success-green": "#28A745",
+                    "secondary-fixed-dim": "#edbf7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": [
+                            "DM Serif Display"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "DM Serif Display"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "DM Serif Display"
+                    ]
+            },
+            "fontSize": {
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        [data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #f7f9ff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar: Data Program is active contextually for forms related to data entry -->
+<nav class="bg-primary dark:bg-primary font-headline-lg text-headline-lg. Labels: font-label-md text-label-md. docked full-width top-0 border-b-2 border-gold-accent flat no shadows sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-20">
+<div class="flex items-center">
+<span class="font-display-lg text-display-lg text-white mr-8">KEMENBUD</span>
+<div class="hidden md:flex space-x-6">
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Statistik</a>
+<a class="font-label-md text-label-md text-gold-accent border-b-2 border-gold-accent pb-1 hover:text-gold-accent transition-colors duration-200 scale-95 transition-transform duration-150" href="#">Data Program</a>
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Tentang</a>
+</div>
+</div>
+<div class="flex items-center">
+<button class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 mr-4 flex items-center">
+<span class="material-symbols-outlined mr-2">search</span> Cari
+            </button>
+<button class="font-label-md text-label-md bg-transparent border border-gold-accent text-gold-accent px-4 py-2 rounded-DEFAULT hover:bg-gold-accent hover:text-white transition-colors duration-200">Masuk</button>
+</div>
+</nav>
+<main class="flex-grow flex justify-center py-12 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="w-full max-w-3xl bg-surface-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
+<div class="mb-8 border-b border-outline-variant pb-6">
+
+<h1 class="font-headline-md text-headline-md text-primary mb-1">Tambah Data Media Kebudayaan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Silakan lengkapi formulir di bawah ini untuk menambahkan entri baru ke dalam Database Media Kebudayaan.</p>
+</div>
+<form class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Row 1: Tahun & Nama Penerima --><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="tahun">Tahun</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="tahun" name="tahun" placeholder="Contoh: 2024" type="text"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="nama_penerima">Nama Penerima</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="nama_penerima" name="nama_penerima" placeholder="Masukkan nama lengkap" type="text"></div><!-- Row 2: Bidang Karya & Kategori Media --><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="bidang_karya">Bidang Karya</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="bidang_karya" name="bidang_karya" placeholder="Contoh: Seni Tari" type="text"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="kategori_media">Kategori Media</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="kategori_media" name="kategori_media"><option disabled="" selected="" value="">Pilih Kategori Media</option><option value="cetak">Media Cetak</option><option value="elektronik">Media Elektronik</option><option value="digital">Media Digital</option><option value="sosial">Media Sosial</option></select></div><!-- Row 3: Kategori Acara --><div class="flex flex-col gap-2 md:col-span-2"><label class="font-label-sm text-label-sm text-on-surface" for="kategori_acara">Kategori Acara</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="kategori_acara" name="kategori_acara"><option disabled="" selected="" value="">Pilih Kategori Acara</option><option value="festival">Festival</option><option value="pameran">Pameran</option><option value="lokakarya">Lokakarya</option><option value="penghargaan">Malam Penghargaan</option></select></div></div><!-- Action Buttons --><div class="pt-6 border-t border-outline-variant flex justify-end gap-4 mt-8"><button class="px-6 py-2 rounded border border-gold-accent text-secondary bg-transparent hover:bg-surface-gray font-label-md text-label-md transition-colors" type="button">Batal</button><button class="px-6 py-2 rounded bg-primary text-white hover:bg-primary-container font-label-md text-label-md transition-colors" type="submit">Simpan Data</button></div></form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container full-width bottom-0 border-t-4 border-gold-accent flat no shadows w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-white">KEMENBUD</span>
+<p class="font-body-md text-body-md text-white opacity-80">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-sm text-label-sm text-gold-accent uppercase tracking-wider mb-2">Tautan Navigasi</h4>
+<a class="font-body-md text-body-md text-surface-variant hover:text-white hover:underline transition-all" href="#">Latar Belakang</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-white hover:underline transition-all" href="#">FAQ</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-white hover:underline transition-all" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-surface-variant hover:text-white hover:underline transition-all" href="#">Peta Situs</a>
+</div>
+<div class="flex flex-col gap-2 md:items-end justify-end">
+<p class="font-label-sm text-label-sm text-surface-variant text-left md:text-right">© 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p>
+</div>
+</footer>
+
+
+
+
+</body></html>
