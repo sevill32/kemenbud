@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tambah Data Tenaga Kebudayaan - KEMENBUD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#d5e3ff",
+                        "on-primary-container": "#799dd6",
+                        "on-secondary-container": "#7a571d",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9ff",
+                        "secondary": "#7b581e",
+                        "error-red": "#DC3545",
+                        "on-surface": "#161c22",
+                        "surface-dim": "#d5dae2",
+                        "on-secondary-fixed": "#281800",
+                        "surface": "#f7f9ff",
+                        "surface-container-high": "#e3e9f0",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "secondary-fixed": "#ffddb0",
+                        "inverse-surface": "#2b3137",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "tertiary-fixed": "#ffdad9",
+                        "outline": "#737780",
+                        "secondary-container": "#ffd08a",
+                        "inverse-on-surface": "#ecf1f9",
+                        "on-primary-fixed": "#001b3c",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#003366",
+                        "on-secondary-fixed-variant": "#604106",
+                        "surface-container-highest": "#dde3eb",
+                        "gold-accent": "#B8860B",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#e9eef6",
+                        "surface-variant": "#dde3eb",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c3c6d1",
+                        "surface-gray": "#F8F9FA",
+                        "tertiary": "#391112",
+                        "surface-cream": "#FCF7F0",
+                        "on-background": "#161c22",
+                        "on-error-container": "#93000a",
+                        "primary": "#001e40",
+                        "surface-container-low": "#eff4fc",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-surface-variant": "#43474f",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary-fixed": "#350e10",
+                        "on-tertiary-container": "#cb8a89",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#532526",
+                        "surface-bright": "#f7f9ff",
+                        "success-green": "#28A745",
+                        "secondary-fixed-dim": "#edbf7a"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1280px",
+                        gutter: "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        base: "8px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["DM Serif Display", "serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["DM Serif Display", "serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["DM Serif Display", "serif"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-primary dark:bg-primary font-headline-lg text-headline-lg font-label-md text-label-md docked full-width top-0 border-b-2 border-gold-accent sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
+</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Beranda</a>
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Statistik</a>
+<a class="text-gold-accent border-b-2 border-gold-accent pb-1 scale-95 transition-transform duration-150" href="#">Data Program</a>
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Tentang</a>
+</div>
+<div class="flex items-center gap-4">
+<!-- Search on right as per JSON -->
+<button class="text-white opacity-90 hover:text-gold-accent transition-colors duration-200 flex items-center justify-center p-2 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-gold-accent hover:bg-secondary-fixed text-primary px-6 py-2 rounded font-label-md text-label-md font-bold transition-colors">
+                Masuk
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex justify-center items-start py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<!-- Form Container -->
+<div class="w-full max-w-3xl bg-surface-lowest border border-outline-variant rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden">
+<!-- Header -->
+<div class="bg-surface-gray border-b border-outline-variant px-8 py-6">
+<h1 class="font-headline-md text-headline-md text-primary mb-1">Tambah Data Tenaga Kebudayaan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Silakan isi formulir di bawah ini untuk menambahkan entitas baru ke dalam basis data.</p>
+</div>
+<!-- Form Body -->
+<form class="p-8 space-y-6">
+<!-- 2 Column Grid for top fields -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Tahun -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="tahun">Tahun</label>
+<select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="tahun" name="tahun">
+<option value="">Pilih Tahun</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+</select>
+</div>
+<!-- Profesi -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="profesi">Profesi / Bidang Keahlian / Karya</label>
+<select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="profesi" name="profesi"><option value="">Pilih Profesi / Bidang Keahlian / Karya</option><option value="Seni Sastra">Seni Sastra</option><option value="Seni Rupa">Seni Rupa</option><option value="Seni Teater">Seni Teater</option><option value="Seni Musik dan Karawitan">Seni Musik dan Karawitan</option><option value="Seni Pedalangan">Seni Pedalangan</option><option value="Seni Tari">Seni Tari</option><option value="Seni Cinema">Seni Cinema</option><option value="Pembina Seni">Pembina Seni</option><option value="Pelestari Budaya">Pelestari Budaya</option><option value="Pelestari Seni">Pelestari Seni</option><option value="Pelestari Tradisi">Pelestari Tradisi</option><option value="Pelestari Kesenian Tradisional">Pelestari Kesenian Tradisional</option><option value="Pelestari Kerajinan Tradisional">Pelestari Kerajinan Tradisional</option><option value="Pelestari Kuliner Tradisional">Pelestari Kuliner Tradisional</option><option value="Pelestari Musik Tradisional">Pelestari Musik Tradisional</option><option value="Pelestari Seni Tari Tradisional">Pelestari Seni Tari Tradisional</option><option value="Pelestari Seni Sastra">Pelestari Seni Sastra</option><option value="Pelestari Seni Rupa">Pelestari Seni Rupa</option><option value="Pelestari Seni Pedalangan">Pelestari Seni Pedalangan</option><option value="Pelestari Tenun dan Kain Tradisional">Pelestari Tenun dan Kain Tradisional</option><option value="Pelestari Batik">Pelestari Batik</option><option value="Pelestari Naskah Kuno">Pelestari Naskah Kuno</option><option value="Pelestari Bahasa dan Aksara Tradisional">Pelestari Bahasa dan Aksara Tradisional</option><option value="Pelestari Adat dan Budaya">Pelestari Adat dan Budaya</option><option value="Pelestari Tradisi Lisan">Pelestari Tradisi Lisan</option><option value="Pelestari Warisan Budaya">Pelestari Warisan Budaya</option><option value="Pengembang Seni">Pengembang Seni</option><option value="Pengembang Seni Tradisional">Pengembang Seni Tradisional</option><option value="Pengembang Tradisi Budaya">Pengembang Tradisi Budaya</option><option value="Pengembang Kerajinan Tradisional">Pengembang Kerajinan Tradisional</option><option value="Pengembang Kuliner Tradisional">Pengembang Kuliner Tradisional</option><option value="Maestro Seni">Maestro Seni</option><option value="Maestro Tari">Maestro Tari</option><option value="Maestro Musik">Maestro Musik</option><option value="Maestro Sastra">Maestro Sastra</option><option value="Maestro Seni Tradisional">Maestro Seni Tradisional</option><option value="Dalang">Dalang</option><option value="Koreografer">Koreografer</option><option value="Penari">Penari</option><option value="Penyair">Penyair</option><option value="Sastrawan">Sastrawan</option><option value="Penulis">Penulis</option><option value="Pencipta Lagu">Pencipta Lagu</option><option value="Musisi">Musisi</option><option value="Musikus">Musikus</option><option value="Komponis">Komponis</option><option value="Komposer">Komposer</option><option value="Konduktor">Konduktor</option><option value="Pemusik Tradisional">Pemusik Tradisional</option><option value="Penyanyi">Penyanyi</option><option value="Pelukis">Pelukis</option><option value="Perupa">Perupa</option><option value="Komikus">Komikus</option><option value="Ilustrator">Ilustrator</option><option value="Seniman">Seniman</option><option value="Seniman Tradisi">Seniman Tradisi</option><option value="Seniman Perupa">Seniman Perupa</option><option value="Aktor/Pemeran">Aktor/Pemeran</option><option value="Aktris">Aktris</option><option value="Sutradara Film">Sutradara Film</option><option value="Penulis Skenario">Penulis Skenario</option><option value="Kritikus Seni/Film/Musik">Kritikus Seni/Film/Musik</option><option value="Fotografer">Fotografer</option><option value="Animator Film">Animator Film</option><option value="Arsitek">Arsitek</option><option value="Desainer">Desainer</option><option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option><option value="Pengrajin">Pengrajin</option><option value="Penenun">Penenun</option><option value="Pembatik">Pembatik</option><option value="Pembuat Alat Musik Tradisional">Pembuat Alat Musik Tradisional</option><option value="Pemain Alat Musik Tradisional">Pemain Alat Musik Tradisional</option><option value="Pelestari/Pengembang Kuliner">Pelestari/Pengembang Kuliner</option><option value="Budayawan">Budayawan</option><option value="Peneliti Kebudayaan">Peneliti Kebudayaan</option><option value="Sejarawan">Sejarawan</option><option value="Arkeolog">Arkeolog</option><option value="Etnomusikolog">Etnomusikolog</option><option value="Pendidik Seni">Pendidik Seni</option><option value="Penggerak Literasi">Penggerak Literasi</option><option value="Pendokumentasi Budaya">Pendokumentasi Budaya</option><option value="Pengarsipan/Digitalisasi Kebudayaan">Pengarsipan/Digitalisasi Kebudayaan</option><option value="Penerbit Buku">Penerbit Buku</option><option value="Pengarang Buku Anak">Pengarang Buku Anak</option><option value="Anak/Pelajar/Remaja Berdedikasi terhadap Kebudayaan">Anak/Pelajar/Remaja Berdedikasi terhadap Kebudayaan</option><option value="Masyarakat Adat">Masyarakat Adat</option><option value="Pemangku/Pengampu Adat">Pemangku/Pengampu Adat</option><option value="Tradisi Lisan">Tradisi Lisan</option><option value="Ritual Adat">Ritual Adat</option><option value="Sistem Adat">Sistem Adat</option><option value="Permainan Tradisional">Permainan Tradisional</option><option value="Kuliner Tradisional">Kuliner Tradisional</option><option value="Tenun Tradisional">Tenun Tradisional</option><option value="Kerajinan Tradisional">Kerajinan Tradisional</option><option value="Wayang">Wayang</option><option value="Teater Tradisional">Teater Tradisional</option><option value="Musik Tradisional">Musik Tradisional</option><option value="Tari Tradisional">Tari Tradisional</option><option value="Seni Pertunjukan">Seni Pertunjukan</option><option value="Sastra Tradisional">Sastra Tradisional</option><option value="Seni Kriya">Seni Kriya</option><option value="Seni Lukis">Seni Lukis</option><option value="Seni Suara">Seni Suara</option><option value="Seni Tutur">Seni Tutur</option><option value="Arsitektur Tradisional">Arsitektur Tradisional</option><option value="Bangunan Bersejarah">Bangunan Bersejarah</option><option value="Bahasa dan Aksara Daerah">Bahasa dan Aksara Daerah</option><option value="Lainnya">Lainnya</option></select>
+</div>
+<!-- Provinsi -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="provinsi">Provinsi</label>
+<select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="provinsi" name="provinsi">
+<option value="">Pilih Provinsi</option>
+<option value="Jawa Barat">Jawa Barat</option>
+<option value="Jawa Tengah">Jawa Tengah</option>
+<option value="Jawa Timur">Jawa Timur</option>
+<option value="Bali">Bali</option>
+</select>
+</div>
+<!-- Kabupaten/Kota -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="kabupaten">Kabupaten / Kota</label>
+<select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="kabupaten" name="kabupaten">
+<option value="">Pilih Kabupaten/Kota</option>
+<option value="Bandung">Bandung</option>
+<option value="Semarang">Semarang</option>
+<option value="Surabaya">Surabaya</option>
+<option value="Denpasar">Denpasar</option>
+</select>
+</div>
+</div>
+<!-- Full Width Fields -->
+<!-- Nama Penerima -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="nama">Nama Penerima</label>
+<input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="nama" name="nama" placeholder="Masukkan nama lengkap" type="text">
+</div>
+<!-- Keterangan -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface" for="keterangan">Keterangan Tambahan</label>
+<textarea class="w-full px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow resize-y" id="keterangan" name="keterangan" placeholder="Detail informasi tambahan terkait tenaga kebudayaan..." rows="4"></textarea>
+</div>
+<!-- Action Buttons -->
+<div class="pt-6 border-t border-outline-variant flex justify-end gap-4">
+<button class="px-6 py-2 rounded border border-gold-accent text-secondary bg-transparent hover:bg-surface-gray font-label-md text-label-md transition-colors" type="button">
+                        Batal
+                    </button>
+<button class="px-6 py-2 rounded bg-primary text-white hover:bg-primary-container font-label-md text-label-md transition-colors" type="submit">
+                        Simpan Data
+                    </button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-primary-container font-body-md text-body-md font-label-sm text-label-sm full-width bottom-0 border-t-4 border-gold-accent w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-white">KEMENBUD</span>
+<p class="text-surface-variant font-body-md text-body-md">
+                © 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">Latar Belakang</a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">Hubungi Kami</a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">Peta Situs</a>
+</div>
+</footer>
+
+
+</body></html>
