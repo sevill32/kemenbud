@@ -1,328 +1,345 @@
-<!DOCTYPE html><html lang="id" style=""><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Tambah Data Media Kebudayaan - KEMENBUD</title>
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tentang Kami - Kementerian Kebudayaan</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary-fixed": "#d5e3ff",
-                    "on-primary-container": "#799dd6",
-                    "on-secondary-container": "#7a571d",
-                    "tertiary-fixed-dim": "#fbb5b3",
-                    "error": "#ba1a1a",
-                    "background": "#f7f9ff",
-                    "secondary": "#7b581e",
-                    "error-red": "#DC3545",
-                    "on-surface": "#161c22",
-                    "surface-dim": "#d5dae2",
-                    "on-secondary-fixed": "#281800",
-                    "surface": "#f7f9ff",
-                    "surface-container-high": "#e3e9f0",
-                    "on-tertiary-fixed-variant": "#6a3838",
-                    "secondary-fixed": "#ffddb0",
-                    "inverse-surface": "#2b3137",
-                    "on-secondary": "#ffffff",
-                    "surface-tint": "#3a5f94",
-                    "tertiary-fixed": "#ffdad9",
-                    "outline": "#737780",
-                    "secondary-container": "#ffd08a",
-                    "inverse-on-surface": "#ecf1f9",
-                    "on-primary-fixed": "#001b3c",
-                    "on-primary": "#ffffff",
-                    "primary-container": "#003366",
-                    "on-secondary-fixed-variant": "#604106",
-                    "surface-container-highest": "#dde3eb",
-                    "gold-accent": "#B8860B",
-                    "primary-fixed-dim": "#a7c8ff",
-                    "surface-container": "#e9eef6",
-                    "surface-variant": "#dde3eb",
-                    "on-tertiary": "#ffffff",
-                    "outline-variant": "#c3c6d1",
-                    "surface-gray": "#F8F9FA",
-                    "tertiary": "#391112",
-                    "surface-cream": "#FCF7F0",
-                    "on-background": "#161c22",
-                    "on-error-container": "#93000a",
-                    "primary": "#001e40",
-                    "surface-container-low": "#eff4fc",
-                    "on-primary-fixed-variant": "#1f477b",
-                    "on-surface-variant": "#43474f",
-                    "error-container": "#ffdad6",
-                    "inverse-primary": "#a7c8ff",
-                    "on-tertiary-fixed": "#350e10",
-                    "on-tertiary-container": "#cb8a89",
-                    "surface-container-lowest": "#ffffff",
-                    "on-error": "#ffffff",
-                    "tertiary-container": "#532526",
-                    "surface-bright": "#f7f9ff",
-                    "success-green": "#28A745",
-                    "secondary-fixed-dim": "#edbf7a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "margin-mobile": "16px",
-                    "margin-desktop": "48px",
-                    "base": "8px"
-            },
-            "fontFamily": {
-                    "display-lg": [
-                            "DM Serif Display"
-                    ],
-                    "label-sm": [
-                            "Inter"
-                    ],
-                    "label-md": [
-                            "Inter"
-                    ],
-                    "body-lg": [
-                            "Inter"
-                    ],
-                    "headline-md": [
-                            "Inter"
-                    ],
-                    "headline-lg": [
-                            "DM Serif Display"
-                    ],
-                    "body-md": [
-                            "Inter"
-                    ],
-                    "headline-lg-mobile": [
-                            "DM Serif Display"
-                    ]
-            },
-            "fontSize": {
-                    "display-lg": [
-                            "48px",
-                            {
-                                    "lineHeight": "56px",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "label-sm": [
-                            "12px",
-                            {
-                                    "lineHeight": "16px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "label-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "20px",
-                                    "letterSpacing": "0.01em",
-                                    "fontWeight": "500"
-                            }
-                    ],
-                    "body-lg": [
-                            "18px",
-                            {
-                                    "lineHeight": "28px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-md": [
-                            "24px",
-                            {
-                                    "lineHeight": "32px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "headline-lg": [
-                            "32px",
-                            {
-                                    "lineHeight": "40px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "body-md": [
-                            "16px",
-                            {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "28px",
-                            {
-                                    "lineHeight": "36px",
-                                    "fontWeight": "400"
-                            }
-                    ]
-            }
-    },
-        },
-      }
-    </script>
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#cb8a89",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "surface-variant": "#dde3eb",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#ffdad9",
+                      "on-error-container": "#93000a",
+                      "primary": "#001e40",
+                      "on-surface-variant": "#43474f",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2b3137",
+                      "surface-dim": "#d5dae2",
+                      "surface-container": "#e9eef6",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "error-red": "#DC3545",
+                      "outline-variant": "#c3c6d1",
+                      "surface-container-lowest": "#ffffff",
+                      "gold-accent": "#B8860B",
+                      "surface-bright": "#f7f9ff",
+                      "inverse-on-surface": "#ecf1f9",
+                      "on-secondary-fixed": "#281800",
+                      "on-surface": "#161c22",
+                      "tertiary": "#391112",
+                      "surface-container-low": "#eff4fc",
+                      "surface-cream": "#FCF7F0",
+                      "on-secondary-fixed-variant": "#604106",
+                      "secondary": "#7b581e",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#001b3c",
+                      "on-tertiary": "#ffffff",
+                      "inverse-primary": "#a7c8ff",
+                      "on-background": "#161c22",
+                      "on-tertiary-fixed": "#350e10",
+                      "tertiary-fixed-dim": "#fbb5b3",
+                      "secondary-container": "#ffd08a",
+                      "surface-gray": "#F8F9FA",
+                      "success-green": "#28A745",
+                      "surface-container-highest": "#dde3eb",
+                      "on-primary": "#ffffff",
+                      "outline": "#737780",
+                      "primary-container": "#003366",
+                      "on-tertiary-fixed-variant": "#6a3838",
+                      "on-secondary-container": "#7a571d",
+                      "background": "#f7f9ff",
+                      "secondary-fixed-dim": "#edbf7a",
+                      "secondary-fixed": "#ffddb0",
+                      "surface": "#f7f9ff",
+                      "surface-container-high": "#e3e9f0",
+                      "tertiary-container": "#532526",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-tint": "#3a5f94",
+                      "on-primary-container": "#799dd6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "DM Serif Display"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "DM Serif Display"
+                      ],
+                      "headline-lg-mobile": [
+                              "DM Serif Display"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
         }
-        [data-weight="fill"] {
-            font-variation-settings: 'FILL' 1;
-        }
-        body {
-            background-color: #f7f9ff;
+        .accordion-content.open {
+            max-height: 500px;
+            padding-top: 16px;
+            padding-bottom: 16px;
         }
     </style>
 </head>
-<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen">
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<nav class="bg-primary text-gold-accent sticky top-0 z-50 flex items-center w-full px-margin-mobile md:px-margin-desktop h-20 border-b-2 border-gold-accent relative">
-
-    <!-- Logo -->
-    <div class="flex items-center gap-4">
-        <span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
-    </div>
-
-    <!-- Menu Tengah -->
-    <ul class="hidden md:flex items-center gap-8 font-label-md text-label-md absolute left-1/2 -translate-x-1/2">
-
-        <!-- Beranda -->
-        <li>
-            <a href="index.html" class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">
-                Beranda
-            </a>
-        </li>
-
-        <!-- Statistik -->
-        <li>
-            <a href="statistik.html" class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">
-                Statistik
-            </a>
-        </li>
-
-        <!-- Data Program -->
-       <li class="relative group cursor-pointer">
-    <div class="flex items-center gap-1 text-white opacity-90 group-hover:opacity-100 group-hover:text-gold-accent transition-colors duration-200">
-                <span>Data Program</span>
-                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary docked full-width top-0 sticky z-50 border-b-2 border-gold-accent flat no shadows">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="text-headline-md font-headline-md font-bold text-on-primary">
+                Kementerian Kebudayaan
             </div>
-
-            <div class="absolute top-full left-0 mt-2 w-64 bg-primary border border-gold-accent rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div class="flex flex-col py-2">
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="mtn.html">
-                        Manajemen Talenta Nasional (MTN)
-                    </a>
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="bimtek.html">
-                        Bimtek Pelaku Budaya
-                    </a>
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="gbn.html">
-                        Gita Bahana Nusantara (GBN)
-                    </a>
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="aki.html">
-                        Anugerah Kebudayaan Indonesia (AKI)
-                    </a>
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="kelembagaan.html">
-                        Penguatan Kelembagaan
-                    </a>
-
-                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="pemajuan-desa.html">
-                        Pemajuan Kebudayaan Desa
-                    </a>
-
-                </div>
-            </div>
-        </li>
-
-        <!-- Tentang -->
-        <li class="relative group cursor-pointer">
-            <a href="tentang.html" class="text-gold-accent border-b-2 border-gold-accent pb-1 cursor-pointer">
-                <span>Tentang</span>
-            </a>
-        </li>
-
-    </ul>
-
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-primary opacity-80 font-label-md text-label-md hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer active:scale-95" href="#">Beranda</a>
+<a class="text-on-primary opacity-80 font-label-md text-label-md hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer active:scale-95" href="#">Statistik</a>
+<div class="relative group">
+<a class="text-on-primary font-bold border-b-2 border-gold-accent pb-1 font-label-md text-label-md hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer active:scale-95 flex items-center gap-1" href="#">
+                        Tentang
+                        <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</a>
+<div class="absolute left-0 mt-2 w-48 bg-surface-container-lowest text-on-surface border border-outline-variant rounded-DEFAULT shadow-sm hidden group-hover:block z-50">
+<a class="block px-4 py-2 hover:bg-surface-gray font-label-md text-label-md" href="#latar-belakang">Latar Belakang</a>
+<a class="block px-4 py-2 hover:bg-surface-gray font-label-md text-label-md" href="#faq">FAQ</a>
+</div>
+</div>
+<a class="text-on-primary opacity-80 font-label-md text-label-md hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer active:scale-95" href="#">Data Program</a>
 </nav>
-<main class="flex-grow flex justify-center py-12 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
-<div class="w-full max-w-3xl bg-surface-lowest border border-outline-variant rounded-xl p-8 shadow-sm">
-<div class="mb-8 border-b border-outline-variant pb-6">
-
-<h1 class="font-headline-md text-headline-md text-primary mb-1">Tambah Data Media Kebudayaan</h1>
-<p class="font-body-md text-body-md text-on-surface-variant">Silakan lengkapi formulir di bawah ini untuk menambahkan entri baru ke dalam Database Media Kebudayaan.</p>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2 rounded-DEFAULT hover:bg-opacity-90 transition-colors border border-outline-variant">
+                Masuk
+            </button>
 </div>
-<form class="space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Row 1: Tahun & Nama Penerima --><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="tahun">Tahun</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="tahun" name="tahun" placeholder="Contoh: 2024" type="text"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="nama_penerima">Nama Penerima</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="nama_penerima" name="nama_penerima" placeholder="Masukkan nama lengkap" type="text"></div><!-- Row 2: Bidang Karya & Kategori Media --><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="bidang_karya">Bidang Karya</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="bidang_karya" name="bidang_karya" placeholder="Contoh: Seni Tari" type="text"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="kategori_media">Kategori Media</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="kategori_media" name="kategori_media"><option disabled="" selected="" value="">Pilih Kategori Media</option><option value="cetak">Media Cetak</option><option value="elektronik">Media Elektronik</option><option value="digital">Media Digital</option><option value="sosial">Media Sosial</option></select></div><!-- Row 3: Kategori Acara --><div class="flex flex-col gap-2 md:col-span-2"><label class="font-label-sm text-label-sm text-on-surface" for="kategori_acara">Kategori Acara</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="kategori_acara" name="kategori_acara"><option disabled="" selected="" value="">Pilih Kategori Acara</option><option value="festival">Festival</option><option value="pameran">Pameran</option><option value="lokakarya">Lokakarya</option><option value="penghargaan">Malam Penghargaan</option></select></div></div><!-- Action Buttons --><div class="pt-6 border-t border-outline-variant flex justify-end gap-4 mt-8"><button class="px-6 py-2 rounded border border-gold-accent text-secondary bg-transparent hover:bg-surface-gray font-label-md text-label-md transition-colors" type="button">Batal</button><button class="px-6 py-2 rounded bg-primary text-white hover:bg-primary-container font-label-md text-label-md transition-colors" type="submit">Simpan Data</button></div></form>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="bg-primary-container text-on-primary py-12 md:py-24 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="max-w-container-max mx-auto relative z-10">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg mb-4 text-gold-accent">Tentang Kementerian Kebudayaan</h1>
+<p class="font-body-lg text-body-lg max-w-3xl opacity-90">Melestarikan, mengembangkan, dan memajukan kebudayaan Indonesia melalui tata kelola yang profesional, inklusif, dan adaptif terhadap perkembangan zaman.</p>
 </div>
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="A subtle, abstract geometric pattern inspired by traditional Indonesian batik motifs, rendered in deep navy blue and very faint gold lines to provide a professional, institutional background texture for a government portal header." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSaTre9n1NZp4papnWQHeksLlZVewWyJE_JpwUo7OJ0tRMxDmgmDbLgq8HBO_Xeo4X4iTGTw7ixV9Y4XLfMKTPjZhwXogvelmB3fe_NGlDaezlx2E5JTdv6uL74B6G7q8LXs-gFqNJOV_JNgqfqizwtevx4ftsGFKT7mRW0cQPeTWnZeFZvkLN40T653KYjTdZgvxVMnrR6t3NW06tQUFMdjaICX4NvhTV3yncGldRC0zFTQoeT_MS')"></div>
+</section>
+<!-- Latar Belakang Section -->
+<section class="py-12 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="latar-belakang">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">Latar Belakang</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Kementerian Kebudayaan didirikan dengan visi yang kuat untuk menjadikan kebudayaan sebagai pondasi utama pembangunan karakter bangsa dan penggerak ekonomi kreatif.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Program Penghargaan Budaya merupakan inisiatif strategis kami untuk mengapresiasi dan memotivasi para pelaku budaya, komunitas, dan institusi yang telah berkontribusi nyata dalam pelestarian dan pemajuan kebudayaan nasional.
+                    </p>
+<div class="bg-surface-gray p-6 rounded-lg border border-outline-variant mb-6 md:mb-0">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Visi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            "Mewujudkan kebudayaan Indonesia yang tangguh, inklusif, dan berdaya saing global."
+                        </p>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Misi</h3>
+<ul class="list-disc pl-5 font-body-md text-body-md text-on-surface-variant space-y-2">
+<li>Melindungi dan melestarikan warisan budaya benda dan takbenda.</li>
+<li>Meningkatkan apresiasi masyarakat terhadap keragaman budaya.</li>
+<li>Mengembangkan diplomasi budaya di tingkat internasional.</li>
+</ul>
+</div>
+</div>
+<div class="md:col-span-7">
+<img class="w-full h-full object-cover rounded-xl shadow-sm border border-outline-variant" data-alt="A professional, well-lit photograph showing a diverse group of cultural practitioners and government officials standing together in an elegant, modern architectural space that blends contemporary design with subtle traditional Indonesian elements. The lighting is bright and inviting, conveying a sense of institutional stability and cultural pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGrk2mK1fE-QKPQRLDBUESd6VBhysezXTlWH7-9LCn9IMD-E25s5xxKQoNUUGrzXHknxADzo5x7C8lzMm3J-Gd8EdfZic5tv0r0ifjWgaiU_aON7o0SjLWXVNDBTedTPHFzRJpJZmqoDrPEf5Z2QfWwnPiX3yW0dSoUJfDqZG7pZcM_hZGWxbPDN7ujFnQdgpwvmkU6KHS7cmOIh8Q2KL1Iw3G6cg4XNIFZLYMEGDfW0pPkWsn_lgb"/>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-gray py-12 md:py-24 px-margin-mobile md:px-margin-desktop border-t border-outline-variant" id="faq">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Informasi lengkap mengenai portal, pengajuan data, dan program kementerian.</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden">
+<button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none hover:bg-surface-dim transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-headline-md text-primary text-[18px]">Bagaimana cara mengajukan data kebudayaan ke portal Dapobud?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant font-body-md text-body-md bg-surface-container-lowest">
+<p>Untuk mengajukan data, Anda harus mendaftar sebagai kontributor terlebih dahulu melalui menu 'Masuk/Daftar'. Setelah akun diverifikasi, Anda dapat mengakses formulir pengajuan data pada dashboard pengguna. Panduan lengkap tersedia di menu Dokumen Panduan.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden">
+<button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none hover:bg-surface-dim transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-headline-md text-primary text-[18px]">Apa kriteria untuk mengikuti Program Penghargaan Budaya?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant font-body-md text-body-md bg-surface-container-lowest">
+<p>Kriteria utama meliputi dedikasi minimal 5 tahun dalam pelestarian budaya, inovasi dalam pengembangan budaya, dan dampak positif bagi masyarakat luas. Dokumen persyaratan detail akan dipublikasikan setiap bulan Maret menjelang periode pendaftaran.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden">
+<button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none hover:bg-surface-dim transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-headline-md text-primary text-[18px]">Berapa lama proses verifikasi data yang diajukan?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant font-body-md text-body-md bg-surface-container-lowest">
+<p>Proses verifikasi oleh tim kurator kami biasanya memakan waktu 14 hingga 30 hari kerja, tergantung pada kompleksitas data dan kelengkapan dokumen pendukung yang dilampirkan.</p>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-DEFAULT overflow-hidden">
+<button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none hover:bg-surface-dim transition-colors" onclick="toggleAccordion(this)">
+<span class="font-headline-md text-headline-md text-primary text-[18px]">Apakah portal ini menyediakan data secara publik?</span>
+<span class="material-symbols-outlined text-primary transform transition-transform duration-300">expand_more</span>
+</button>
+<div class="accordion-content px-6 text-on-surface-variant font-body-md text-body-md bg-surface-container-lowest">
+<p>Ya, sebagian besar data statistik dan informasi umum program dapat diakses secara publik. Namun, data spesifik terkait rincian entitas tertentu mungkin memerlukan akses masuk (login) bagi peneliti atau instansi terkait demi keamanan informasi.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
 <!-- Footer -->
-<footer class="bg-primary text-gold-accent w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter border-t-4 border-gold-accent mt-auto">
-
-    <!-- Kolom Kiri -->
-    <div>
-        <span class="font-headline-md text-headline-md text-white block mb-4">
-            KEMENBUD
-        </span>
-
-        <p class="font-body-md text-body-md text-surface-variant max-w-sm">
-            Portal Referensi Kebudayaan Nasional. Mendokumentasikan dan mempublikasikan data kebudayaan untuk pelestarian dan pemajuan kebudayaan Indonesia.
-        </p>
-    </div>
-
-    <!-- Tautan Penting - Center -->
-    <div class="flex flex-col gap-2 items-center text-center">
-        <h3 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-2">
-            Tautan Penting
-        </h3>
-
-        <a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="tentang.html">
-            Latar Belakang
-        </a>
-
-        <a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="tentang.html">
-            FAQ
-        </a>
-
-        <a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">
-            Hubungi Kami
-        </a>
-
-        <a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">
-            Peta Situs
-        </a>
-    </div>
-
-    <!-- Kolom Kanan -->
-    <div class="flex flex-col gap-2 md:items-end md:text-right">
-        <h3 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-2">
-            Kontak
-        </h3>
-
-        <p class="font-body-md text-body-md text-surface-variant">
-            Gedung E, Kompleks Kemdikbudristek<br>
-            Jl. Jenderal Sudirman, Senayan<br>
-            Jakarta 10270
-        </p>
-
-        <p class="font-body-md text-body-md text-surface-variant mt-4 opacity-80">
-            © 2026 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
-        </p>
-    </div>
-
+<footer class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary full-width border-t-4 border-gold-accent flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full py-12 px-margin-desktop max-w-container-max mx-auto gap-base">
+<div class="text-headline-md font-headline-md font-bold text-on-primary mb-4 md:mb-0">
+                Kementerian Kebudayaan
+            </div>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm">
+<a class="text-on-primary opacity-70 hover:text-gold-accent transition-all" href="#">Kebijakan Privasi</a>
+<a class="text-on-primary opacity-70 hover:text-gold-accent transition-all" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-primary opacity-70 hover:text-gold-accent transition-all" href="#">Kontak Kami</a>
+<a class="text-on-primary opacity-70 hover:text-gold-accent transition-all" href="#">Peta Situs</a>
+</div>
+<div class="font-body-md text-body-md text-center md:text-right mt-6 md:mt-0 opacity-70">
+                © 2024 Kementerian Kebudayaan Republik Indonesia. Hak Cipta Dilindungi Undang-Undang.
+            </div>
+</div>
 </footer>
+<script>
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            // Close other open accordions (optional, remove if you want multiple open at once)
+            const allContents = document.querySelectorAll('.accordion-content');
+            const allIcons = document.querySelectorAll('.material-symbols-outlined');
+            
+            allContents.forEach((c) => {
+                if (c !== content && c.classList.contains('open')) {
+                    c.classList.remove('open');
+                    c.previousElementSibling.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                }
+            });
 
-
-
-
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('open');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
 </body></html>
