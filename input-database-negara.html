@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tambah Data - Database Negara Kebudayaan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#d5e3ff",
+                        "on-primary-container": "#799dd6",
+                        "on-secondary-container": "#7a571d",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "error": "#ba1a1a",
+                        "background": "#f7f9ff",
+                        "secondary": "#7b581e",
+                        "error-red": "#DC3545",
+                        "on-surface": "#161c22",
+                        "surface-dim": "#d5dae2",
+                        "on-secondary-fixed": "#281800",
+                        "surface": "#f7f9ff",
+                        "surface-container-high": "#e3e9f0",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "secondary-fixed": "#ffddb0",
+                        "inverse-surface": "#2b3137",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#3a5f94",
+                        "tertiary-fixed": "#ffdad9",
+                        "outline": "#737780",
+                        "secondary-container": "#ffd08a",
+                        "inverse-on-surface": "#ecf1f9",
+                        "on-primary-fixed": "#001b3c",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#003366",
+                        "on-secondary-fixed-variant": "#604106",
+                        "surface-container-highest": "#dde3eb",
+                        "gold-accent": "#B8860B",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#e9eef6",
+                        "surface-variant": "#dde3eb",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c3c6d1",
+                        "surface-gray": "#F8F9FA",
+                        "tertiary": "#391112",
+                        "surface-cream": "#FCF7F0",
+                        "on-background": "#161c22",
+                        "on-error-container": "#93000a",
+                        "primary": "#001e40",
+                        "surface-container-low": "#eff4fc",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "on-surface-variant": "#43474f",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary-fixed": "#350e10",
+                        "on-tertiary-container": "#cb8a89",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#532526",
+                        "surface-bright": "#f7f9ff",
+                        "success-green": "#28A745",
+                        "secondary-fixed-dim": "#edbf7a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["DM Serif Display"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["DM Serif Display"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["DM Serif Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-primary dark:bg-primary font-headline-lg text-headline-lg. Labels: font-label-md text-label-md. docked full-width top-0 border-b-2 border-gold-accent sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">
+<span class="font-label-md text-label-md">Beranda</span>
+</a>
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">
+<span class="font-label-md text-label-md">Statistik</span>
+</a>
+<a class="text-gold-accent border-b-2 border-gold-accent pb-1 font-label-md text-label-md hover:text-gold-accent transition-colors duration-200 scale-95 transition-transform duration-150" href="#">
+                Data Program
+            </a>
+<a class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">
+<span class="font-label-md text-label-md">Tentang</span>
+</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-tint/20 rounded-full px-4 py-2 border border-outline-variant/30">
+<span class="material-symbols-outlined text-white mr-2 text-sm" data-icon="search">search</span>
+<input class="bg-transparent border-none text-white focus:outline-none placeholder-white/70 font-body-md text-sm w-32 focus:w-48 transition-all duration-300" placeholder="Cari..." type="text">
+</div>
+<button class="bg-gold-accent text-primary px-6 py-2 rounded font-label-md text-label-md font-bold hover:bg-secondary-fixed-dim transition-colors">
+                Masuk
+            </button>
+</div>
+</header>
+<div class="flex-grow flex justify-center items-start py-margin-desktop px-margin-mobile md:px-margin-desktop">
+<!-- Main Form Canvas -->
+<main class="w-full max-w-3xl bg-surface-lowest border border-outline-variant rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden">
+<div class="bg-surface-gray border-b border-outline-variant px-8 py-6"><h1 class="font-headline-md text-headline-md text-primary mb-1">Tambah Data Negara Kebudayaan</h1><p class="font-body-md text-body-md text-on-surface-variant">Silakan isi formulir di bawah ini untuk menambahkan entitas baru ke dalam basis data.</p></div>
+<form class=""><div class="p-8 space-y-6"><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="tahun_penerima">Tahun Penerima</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="tahun_penerima" name="tahun_penerima" placeholder="Contoh: 2024" type="number"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="kategori">Kategori</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="kategori" name="kategori"><option value="">Pilih Kategori</option><option value="seni_pertunjukan">Seni Pertunjukan</option><option value="seni_rupa">Seni Rupa</option><option value="sastra">Sastra</option><option value="adat_istiadat">Adat Istiadat</option><option value="pengetahuan_tradisional">Pengetahuan Tradisional</option></select></div></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="profesi">Profesi / Bidang Keahlian / Karya</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="profesi" name="profesi" placeholder="Contoh: Seniman Tradisional, Penulis" type="text"></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="nama_penerima">Nama Penerima</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="nama_penerima" name="nama_penerima" placeholder="Masukkan nama lengkap" type="text"></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="nation">Nation (Wilayah Statistik)</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="nation" name="nation"><option value="">Pilih Wilayah</option><option value="asean">ASEAN</option><option value="asia_timur">Asia Timur</option><option value="eropa">Eropa</option></select></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="negara">Negara Spesifik</label><input class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="negara" name="negara" placeholder="Contoh: Indonesia, Jepang" type="text"></div></div><div class="flex flex-col gap-2"><label class="font-label-sm text-label-sm text-on-surface" for="penghargaan">Bentuk Penghargaan</label><select class="w-full h-10 px-3 py-2 bg-surface border border-outline-variant rounded text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow appearance-none" id="penghargaan" name="penghargaan"><option value="">Pilih Bentuk Penghargaan</option><option value="piagam">Piagam</option><option value="plakat">Plakat</option><option value="pin_emas">Pin Emas</option><option value="tunai">Tunai</option></select></div><div class="pt-6 border-t border-outline-variant flex justify-end gap-4"><button class="px-6 py-2 rounded border border-gold-accent text-secondary bg-transparent hover:bg-surface-gray font-label-md text-label-md transition-colors" type="button">Batal</button><button class="px-6 py-2 rounded bg-primary text-white hover:bg-primary-container font-label-md text-label-md transition-colors" type="submit">Simpan Data</button></div></div></form>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container font-body-md text-body-md. Labels: font-label-sm text-label-sm. full-width bottom-0 border-t-4 border-gold-accent w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter mt-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-white">KEMENBUD</span>
+<p class="text-surface-variant font-label-sm text-label-sm mt-4">
+                © 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi
+            </p>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2 md:items-end justify-center">
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">
+                    Latar Belakang
+                </a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">
+                    FAQ
+                </a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">
+                    Hubungi Kami
+                </a>
+<a class="text-surface-variant hover:text-white hover:underline transition-all font-label-sm text-label-sm" href="#">
+                    Peta Situs
+                </a>
+</div>
+</div>
+</footer>
+
+
+</body></html>
