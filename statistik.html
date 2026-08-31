@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Statistik Program Kebudayaan - Kemenbud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=DM+Serif+Display&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#dde3eb",
+                        "on-surface": "#161c22",
+                        "background": "#f7f9ff",
+                        "on-secondary-fixed": "#281800",
+                        "inverse-on-surface": "#ecf1f9",
+                        "secondary-fixed": "#ffddb0",
+                        "surface-dim": "#d5dae2",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "surface-bright": "#f7f9ff",
+                        "surface-gray": "#F8F9FA",
+                        "tertiary-fixed": "#ffdad9",
+                        "on-tertiary-container": "#cb8a89",
+                        "error-red": "#DC3545",
+                        "on-tertiary-fixed": "#350e10",
+                        "secondary-container": "#ffd08a",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "secondary-fixed-dim": "#edbf7a",
+                        "inverse-surface": "#2b3137",
+                        "on-primary-container": "#799dd6",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#eff4fc",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f7f9ff",
+                        "on-secondary-fixed-variant": "#604106",
+                        "on-primary-fixed": "#001b3c",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-cream": "#FCF7F0",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e3e9f0",
+                        "primary": "#001e40",
+                        "tertiary": "#391112",
+                        "outline": "#737780",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#7a571d",
+                        "outline-variant": "#c3c6d1",
+                        "on-error": "#ffffff",
+                        "success-green": "#28A745",
+                        "tertiary-container": "#532526",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-tint": "#3a5f94",
+                        "gold-accent": "#B8860B",
+                        "on-background": "#161c22",
+                        "on-surface-variant": "#43474f",
+                        "primary-fixed": "#d5e3ff",
+                        "error": "#ba1a1a",
+                        "primary-container": "#003366",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "surface-variant": "#dde3eb",
+                        "surface-container": "#e9eef6",
+                        "secondary": "#7b581e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "display-lg": ["DM Serif Display"],
+                        "headline-lg": ["DM Serif Display"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["DM Serif Display"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9ff; }
+        .chart-container { position: relative; height: 300px; width: 100%; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary font-label-md text-label-md border-b-2 border-gold-accent sticky top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 shadow-md">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">KEMENBUD</span>
+</div>
+<div class="hidden md:flex gap-8 items-center h-full">
+<a class="text-on-primary/80 hover:text-on-primary h-full flex items-center hover:bg-primary-container/50 transition-colors duration-200 cursor-pointer active:scale-95 px-4" href="#">Beranda</a>
+<a class="text-on-primary/80 hover:text-on-primary h-full flex items-center hover:bg-primary-container/50 transition-colors duration-200 cursor-pointer active:scale-95 px-4" href="#">Data Program</a>
+<a class="text-on-primary/80 hover:text-on-primary h-full flex items-center hover:bg-primary-container/50 transition-colors duration-200 cursor-pointer active:scale-95 px-4" href="#">AKI</a>
+<a class="text-on-primary/80 hover:text-on-primary h-full flex items-center hover:bg-primary-container/50 transition-colors duration-200 cursor-pointer active:scale-95 px-4" href="#">Tentang</a>
+<a aria-current="page" class="text-on-primary border-b-2 border-gold-accent pb-1 h-full flex items-center hover:bg-primary-container/50 transition-colors duration-200 cursor-pointer active:scale-95 px-4" href="#">Statistik</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-primary-container text-on-primary border border-outline/30 rounded-md px-3 py-1.5 focus:outline-none focus:border-gold-accent text-sm w-48 placeholder-on-primary/50" placeholder="Cari..." type="text">
+<span class="material-symbols-outlined absolute right-2 top-1.5 text-on-primary/70 text-sm">search</span>
+</div>
+<button class="bg-gold-accent text-primary font-semibold py-2 px-6 rounded-md hover:bg-secondary-fixed transition-colors">Masuk</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-margin-mobile md:px-margin-desktop max-w-container-max py-12">
+<!-- Header -->
+<header class="mb-12 text-center md:text-left">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold mb-4">Statistik Program Kebudayaan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+                Transparansi data dan pemantauan capaian program kebudayaan nasional. Visualisasi ini menyajikan data agregat untuk mendukung evaluasi dan perencanaan strategis pemajuan kebudayaan.
+            </p>
+</header>
+<!-- Filters -->
+<section class="bg-surface-lowest border border-[#E9ECEF] rounded-lg p-6 mb-12 shadow-[0_4px_12px_rgba(0,0,0,0.02)] flex flex-col md:flex-row gap-6 items-end bg-white">
+<div class="w-full md:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2" for="filter-tahun">Tahun Pelaksanaan</label>
+<select class="w-full border border-outline-variant rounded p-2 focus:ring-gold-accent focus:border-gold-accent bg-surface-gray" id="filter-tahun">
+<option value="semua">Semua Tahun</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+</select>
+</div>
+<div class="w-full md:w-1/3">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2" for="filter-wilayah">Wilayah</label>
+<select class="w-full border border-outline-variant rounded p-2 focus:ring-gold-accent focus:border-gold-accent bg-surface-gray" id="filter-wilayah">
+<option value="nasional">Nasional (Semua Provinsi)</option>
+<option value="jawa">Jawa</option>
+<option value="sumatera">Sumatera</option>
+</select>
+</div>
+<div class="w-full md:w-1/3 flex justify-end">
+<button class="bg-primary text-white py-2 px-6 rounded-md hover:bg-primary-container transition-colors w-full md:w-auto">Terapkan Filter</button>
+</div>
+</section>
+<!-- Overview Dashboard -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 flex items-center gap-4 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-shadow">
+<div class="bg-primary-container/10 p-4 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Penerima Manfaat</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">124.500<span class="text-sm font-normal text-outline ml-1">+</span></p>
+</div>
+</div>
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 flex items-center gap-4 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-shadow">
+<div class="bg-gold-accent/10 p-4 rounded-full text-gold-accent">
+<span class="material-symbols-outlined text-3xl">event_available</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Program Aktif</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">1.250</p>
+</div>
+</div>
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 flex items-center gap-4 hover:shadow-[0_8px_24px_rgba(0,0,0,0.05)] transition-shadow">
+<div class="bg-success-green/10 p-4 rounded-full text-success-green">
+<span class="material-symbols-outlined text-3xl">map</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Wilayah Terjangkau</p>
+<p class="font-headline-md text-headline-md text-primary mt-1">38 <span class="font-body-md text-body-md text-on-surface-variant ml-1">Provinsi</span></p>
+</div>
+</div>
+</section>
+<!-- Detailed Charts Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+<!-- MTN Bar Chart -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Maestro Seni Tradisi (MTN)</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Diagram Batang</option><option>Diagram Lingkaran</option><option>Diagram Garis</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Distribusi maestro berdasarkan bidang kesenian.</p>
+<div class="chart-container">
+<canvas id="chartMTN" width="526" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 526px;"></canvas>
+</div>
+</div>
+<!-- Bimtek Line Graph -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Tren Bimbingan Teknis</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Diagram Garis</option><option>Diagram Batang</option><option>Diagram Area</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Pertumbuhan peserta Bimtek dalam 5 tahun terakhir.</p>
+<div class="chart-container">
+<canvas id="chartBimtek" width="526" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 526px;"></canvas>
+</div>
+</div>
+<!-- GBN Pie Chart -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Gita Bahana Nusantara (GBN)</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Diagram Lingkaran</option><option>Diagram Batang</option><option>Diagram Donat</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Sebaran anggota paduan suara &amp; orkestra per wilayah.</p>
+<div class="chart-container flex justify-center">
+<canvas id="chartGBN" style="max-width: 300px; max-height: 300px; display: block; box-sizing: border-box; height: 300px; width: 300px;" width="300" height="300"></canvas>
+</div>
+</div>
+<!-- AKI Bar Chart -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Anugerah Kebudayaan (AKI)</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Stacked Bar</option><option>Grouped Bar</option><option>Line Chart</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Jumlah penghargaan per kategori setiap tahun.</p>
+<div class="chart-container">
+<canvas id="chartAKI" width="526" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 526px;"></canvas>
+</div>
+</div>
+<!-- Kelembagaan Doughnut -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dukungan Kelembagaan</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Diagram Donat</option><option>Diagram Batang</option><option>Diagram Lingkaran</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Proporsi jenis organisasi kebudayaan yang didukung.</p>
+<div class="chart-container flex justify-center">
+<canvas id="chartLembaga" style="max-width: 300px; max-height: 300px; display: block; box-sizing: border-box; height: 300px; width: 300px;" width="300" height="300"></canvas>
+</div>
+</div>
+<!-- Desa Bar Horizontal -->
+<div class="bg-white border border-[#E9ECEF] rounded-lg p-6 shadow-sm">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Sebaran Desa Budaya</h3><div class="mb-4"><label class="sr-only">Pilih Jenis Diagram</label><select class="text-label-sm font-label-sm border border-outline-variant rounded px-2 py-1 bg-surface-gray focus:ring-gold-accent focus:border-gold-accent text-primary"><option>Horizontal Bar</option><option>Vertical Bar</option><option>Table View</option></select></div>
+<p class="font-body-sm text-sm text-on-surface-variant mb-6">Top 10 Provinsi dengan jumlah Desa Pemajuan Kebudayaan terbanyak.</p>
+<div class="chart-container">
+<canvas id="chartDesa" width="526" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 526px;"></canvas>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary font-body-md text-body-md full-width border-t-4 border-gold-accent w-full py-12 px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<span class="font-headline-md text-headline-md text-on-primary font-bold mb-4 block">KEMENBUD</span>
+<p class="text-on-primary/70 mb-4">© 2024 Kementerian Kebudayaan Republik Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
+</div>
+<div class="md:col-span-8 flex flex-col md:flex-row justify-end gap-6 md:gap-12 mt-6 md:mt-0">
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-gold-accent transition-all duration-200" href="#">Kebijakan Privasi</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-gold-accent transition-all duration-200" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-gold-accent transition-all duration-200" href="#">Peta Situs</a>
+<a class="text-on-primary/70 hover:text-on-primary hover:underline decoration-gold-accent transition-all duration-200" href="#">Hubungi Kami</a>
+</div>
+</footer>
+<!-- Chart Configuration Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme Colors
+            const colorPrimary = '#001e40';
+            const colorGold = '#B8860B';
+            const colorSecondary = '#799dd6';
+            const colorAccent1 = '#3a5f94';
+            const colorAccent2 = '#d5e3ff';
+            
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#43474f';
+            Chart.defaults.scale.grid.color = '#E9ECEF';
+
+            // 1. MTN Bar Chart
+            new Chart(document.getElementById('chartMTN'), {
+                type: 'bar',
+                data: {
+                    labels: ['Sastra', 'Rupa', 'Teater', 'Tari', 'Musik', 'Lisan'],
+                    datasets: [{
+                        label: 'Jumlah Maestro',
+                        data: [45, 62, 38, 85, 70, 55],
+                        backgroundColor: colorPrimary,
+                        borderRadius: 4
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+
+            // 2. Bimtek Line Graph
+            new Chart(document.getElementById('chartBimtek'), {
+                type: 'line',
+                data: {
+                    labels: ['2019', '2020', '2021', '2022', '2023'],
+                    datasets: [{
+                        label: 'Peserta',
+                        data: [1200, 800, 1500, 2200, 3100],
+                        borderColor: colorGold,
+                        backgroundColor: colorGold,
+                        tension: 0.3,
+                        borderWidth: 3,
+                        pointRadius: 4
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+
+            // 3. GBN Pie Chart
+            new Chart(document.getElementById('chartGBN'), {
+                type: 'pie',
+                data: {
+                    labels: ['Sumatera', 'Jawa', 'Kalimantan', 'Sulawesi', 'Bali & Nusa T', 'Maluku & Papua'],
+                    datasets: [{
+                        data: [20, 35, 10, 15, 10, 10],
+                        backgroundColor: [colorPrimary, colorAccent1, colorSecondary, colorAccent2, colorGold, '#e3e9f0'],
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+            });
+
+            // 4. AKI Bar Chart (Stacked)
+            new Chart(document.getElementById('chartAKI'), {
+                type: 'bar',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023'],
+                    datasets: [
+                        { label: 'Tenaga Ahli', data: [10, 12, 15, 18], backgroundColor: colorPrimary },
+                        { label: 'Lembaga', data: [5, 8, 10, 12], backgroundColor: colorSecondary },
+                        { label: 'Media', data: [3, 4, 6, 8], backgroundColor: colorGold }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: { stacked: true }, y: { stacked: true } } }
+            });
+
+            // 5. Kelembagaan Doughnut
+            new Chart(document.getElementById('chartLembaga'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Sanggar', 'Yayasan', 'Komunitas', 'Lainnya'],
+                    datasets: [{
+                        data: [45, 25, 20, 10],
+                        backgroundColor: [colorPrimary, colorSecondary, colorGold, colorAccent2],
+                        borderWidth: 1,
+                        cutout: '60%'
+                    }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+            });
+
+            // 6. Desa Horizontal Bar
+            new Chart(document.getElementById('chartDesa'), {
+                type: 'bar',
+                data: {
+                    labels: ['Jawa Tengah', 'Jawa Timur', 'Jawa Barat', 'DI Yogyakarta', 'Bali', 'Sumatera Barat', 'Sulawesi Selatan', 'NTT', 'Sumatera Utara', 'Aceh'],
+                    datasets: [{
+                        label: 'Jumlah Desa',
+                        data: [120, 105, 95, 80, 65, 55, 45, 40, 35, 25],
+                        backgroundColor: colorAccent1,
+                        borderRadius: 4
+                    }]
+                },
+                options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+            });
+        });
+    </script>
+
+
+</body></html>
