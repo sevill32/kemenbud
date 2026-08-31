@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Database Anugerah Kebudayaan Indonesia (AKI) - KEMENBUD</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "gold-accent": "#B8860B",
+                        "secondary": "#7b581e",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-container": "#ffd08a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eff4fc",
+                        "tertiary-fixed": "#ffdad9",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-background": "#161c22",
+                        "surface-container-high": "#e3e9f0",
+                        "on-tertiary-fixed": "#350e10",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "outline": "#737780",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "success-green": "#28A745",
+                        "on-tertiary-fixed-variant": "#6a3838",
+                        "surface-gray": "#F8F9FA",
+                        "primary-container": "#003366",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ecf1f9",
+                        "secondary-fixed-dim": "#edbf7a",
+                        "tertiary": "#391112",
+                        "surface-variant": "#dde3eb",
+                        "on-primary-container": "#799dd6",
+                        "surface-dim": "#d5dae2",
+                        "surface-cream": "#FCF7F0",
+                        "primary-fixed": "#d5e3ff",
+                        "primary": "#001e40",
+                        "on-secondary-fixed": "#281800",
+                        "tertiary-fixed-dim": "#fbb5b3",
+                        "surface-tint": "#3a5f94",
+                        "background": "#f7f9ff",
+                        "surface": "#f7f9ff",
+                        "tertiary-container": "#532526",
+                        "error-red": "#DC3545",
+                        "surface-bright": "#f7f9ff",
+                        "on-surface-variant": "#43474f",
+                        "on-secondary-container": "#7a571d",
+                        "secondary-fixed": "#ffddb0",
+                        "on-secondary-fixed-variant": "#604106",
+                        "inverse-surface": "#2b3137",
+                        "surface-container-highest": "#dde3eb",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001b3c",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#161c22",
+                        "on-tertiary-container": "#cb8a89",
+                        "surface-container": "#e9eef6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["DM Serif Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["DM Serif Display"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["DM Serif Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-primary text-gold-accent sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 border-b-2 border-gold-accent">
+<div class="flex items-center gap-gutter">
+<span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Beranda</a>
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Statistik</a>
+<div class="group relative">
+<button class="flex items-center gap-1 font-label-md text-label-md text-gold-accent border-b-2 border-gold-accent pb-1 scale-95 transition-transform duration-150">
+    Data Program
+    <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden hidden group-hover:block z-50">
+<div class="flex flex-col py-2">
+<a class="px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low hover:text-gold-accent transition-colors" href="#">Manajemen Talenta Nasional (MTN)</a>
+<a class="px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low hover:text-gold-accent transition-colors" href="#">Bimtek Pelaku Budaya</a>
+<a class="px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low hover:text-gold-accent transition-colors" href="#">Gita Bahana Nusantara (GBN)</a>
+<a class="px-4 py-2 text-sm text-on-surface bg-surface-container-low text-gold-accent font-medium" href="#">Anugerah Kebudayaan Indonesia (AKI)</a>
+<a class="px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low hover:text-gold-accent transition-colors" href="#">Penguatan Kelembagaan</a>
+<a class="px-4 py-2 text-sm text-on-surface hover:bg-surface-container-low hover:text-gold-accent transition-colors" href="#">Pemajuan Kebudayaan Desa</a>
+</div>
+</div>
+</div>
+<a class="font-label-md text-label-md text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200" href="#">Tentang</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<input class="bg-primary-container text-white border-none rounded-full py-2 pl-4 pr-10 focus:ring-2 focus:ring-gold-accent text-sm w-64 placeholder-primary-fixed-dim" placeholder="Cari data..." type="text">
+<span class="material-symbols-outlined absolute right-3 top-2 text-primary-fixed-dim">search</span>
+</div>
+<button class="bg-gold-accent text-primary font-label-md text-label-md px-4 py-2 rounded font-semibold hover:bg-secondary-container transition-colors">Masuk</button>
+</div>
+</header>
+<div class="flex flex-1 w-full max-w-[1280px] mx-auto overflow-hidden">
+<!-- SideNavBar (Filter) -->
+<aside class="hidden md:flex flex-col bg-surface-gray border-r border-outline-variant w-72 flex-shrink-0 h-[calc(100vh-80px)] sticky top-20 overflow-y-auto">
+<div class="p-6 border-b border-outline-variant sticky top-0 bg-surface-gray z-10">
+<h2 class="font-headline-md text-headline-md text-primary">Filter Data</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Sesuaikan tampilan tabel</p>
+</div>
+<div class="p-4 flex flex-col gap-6">
+<!-- Filter Section: Tahun -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">calendar_today</span> Rentang Tahun
+                    </label>
+<div class="flex items-center gap-2">
+<input class="w-full rounded border-outline-variant py-1 px-2 text-sm focus:ring-primary" max="2026" min="1969" placeholder="1969" type="number">
+<span class="text-outline">-</span>
+<input class="w-full rounded border-outline-variant py-1 px-2 text-sm focus:ring-primary" max="2026" min="1969" placeholder="2024" type="number">
+</div>
+</div>
+<!-- Filter Section: Kategori AKI -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">category</span> Kategori Penghargaan
+                    </label>
+<select class="w-full rounded border-outline-variant py-2 px-3 text-sm focus:ring-primary bg-white">
+<option value="">Semua Kategori</option>
+<option value="aki_menteri">AKI Menteri</option>
+<option value="tkri">TKRI (Tanda Kehormatan RI)</option>
+</select>
+</div>
+<!-- Filter Section: Tanda Kehormatan -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">verified</span> Tanda Kehormatan
+                    </label>
+<select class="w-full rounded border-outline-variant py-2 px-3 text-sm focus:ring-primary bg-white">
+<option value="">Semua Tanda Kehormatan</option>
+<option value="bintang_jasa">Bintang Jasa</option>
+<option value="bintang_mahaputra">Bintang Mahaputra</option>
+<option value="bintang_budaya">Bintang Budaya Parama Dharma</option>
+<option value="satylancana">Satyalancana Kebudayaan</option>
+</select>
+</div>
+<!-- Filter Section: Profesi -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">work</span> Profesi / Bidang
+                    </label>
+<div class="max-h-40 overflow-y-auto pr-2 space-y-2 border border-outline-variant rounded p-2 bg-white">
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Pelukis</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Perupa</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Sastrawan</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Budayawan</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Seniman</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Pemusik</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Penari</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Teaterawan</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Sineas / Film</label>
+<label class="flex items-center gap-2 text-sm cursor-pointer hover:bg-surface-container-low p-1 rounded"><input class="rounded text-primary focus:ring-primary" type="checkbox"> Kurator</label>
+</div>
+</div>
+<!-- Filter Section: Wilayah -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">map</span> Wilayah
+                    </label>
+<select class="w-full rounded border-outline-variant py-2 px-3 text-sm focus:ring-primary bg-white mb-2">
+<option value="">Pilih Provinsi</option>
+<option value="aceh">Aceh</option>
+<option value="bali">Bali</option>
+<option value="banten">Banten</option>
+<option value="dki_jakarta">DKI Jakarta</option>
+<option value="jawa_barat">Jawa Barat</option>
+<option value="jawa_tengah">Jawa Tengah</option>
+<option value="jawa_timur">Jawa Timur</option>
+<option value="yogyakarta">DI Yogyakarta</option>
+<option value="papua">Papua</option>
+</select>
+<select class="w-full rounded border-outline-variant py-2 px-3 text-sm focus:ring-primary bg-white disabled:opacity-50" disabled="">
+<option value="">Pilih Kab/Kota</option>
+</select>
+</div>
+<!-- Filter Section: Demografi -->
+<div>
+<label class="font-label-sm text-label-sm text-on-surface font-semibold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">person</span> Demografi
+                    </label>
+<div class="space-y-3">
+<div>
+<span class="text-xs text-on-surface-variant block mb-1">Jenis Kelamin</span>
+<div class="flex gap-4">
+<label class="flex items-center gap-1 text-sm"><input class="text-primary focus:ring-primary" name="gender" type="radio"> Laki-laki</label>
+<label class="flex items-center gap-1 text-sm"><input class="text-primary focus:ring-primary" name="gender" type="radio"> Perempuan</label>
+</div>
+</div>
+<div>
+<span class="text-xs text-on-surface-variant block mb-1">Status Kehidupan</span>
+<div class="flex gap-4">
+<label class="flex items-center gap-1 text-sm"><input class="text-primary focus:ring-primary" name="status_hidup" type="radio"> Hidup</label>
+<label class="flex items-center gap-1 text-sm"><input class="text-primary focus:ring-primary" name="status_hidup" type="radio"> Wafat</label>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant mt-2 sticky bottom-0 bg-surface-gray pb-4">
+<button class="w-full bg-primary text-white py-2 rounded font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">Terapkan Filter</button>
+<button class="w-full mt-2 text-primary py-2 rounded font-label-md text-label-md border border-outline-variant hover:bg-surface-variant transition-colors">Reset</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col p-6 md:p-8 overflow-y-auto">
+<div class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Database Anugerah Kebudayaan Indonesia</h1>
+<p class="text-on-surface-variant max-w-3xl">Direktori komprehensif penerima penghargaan kebudayaan tingkat nasional. Jelajahi data tenaga, lembaga, dan entitas kebudayaan berprestasi dari seluruh Indonesia.</p>
+</div>
+<!-- Sub-section Tabs -->
+<div class="flex overflow-x-auto border-b border-outline-variant mb-6 no-scrollbar pb-1 gap-2"><button class="whitespace-nowrap px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-t-lg transition-colors">Database Tenaga</button><button class="whitespace-nowrap px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-t-lg transition-colors">Database Lembaga</button><button class="whitespace-nowrap px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-t-lg transition-colors">Database Provinsi</button><button class="whitespace-nowrap px-4 py-2 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-t-lg transition-colors">Database Negara</button><button class="whitespace-nowrap px-4 py-2 font-label-md text-label-md bg-secondary-container text-on-secondary-container font-semibold rounded-t-lg border-b-2 border-primary">Database Media</button></div>
+<!-- Data Table Container (Glassmorphism/Card style) -->
+<div class="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden flex flex-col">
+<!-- Table Toolbar -->
+<div class="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-gray">
+<div class="font-label-md text-label-md text-on-surface">Menampilkan <span class="font-bold">1-5</span> dari <span class="font-bold">142</span> data</div>
+<div class="flex gap-2"><button class="flex items-center gap-1 text-sm bg-primary text-white px-4 py-1.5 rounded hover:bg-primary-container transition-colors font-medium"><span class="material-symbols-outlined text-sm">add</span> Tambah Data Baru</button>
+<button class="flex items-center gap-1 text-sm border border-outline-variant px-3 py-1.5 rounded hover:bg-surface-container transition-colors bg-white">
+<span class="material-symbols-outlined text-sm">download</span> Ekspor CSV
+                        </button>
+</div>
+</div>
+<!-- Responsive Table Wrapper -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface border-b border-outline-variant"><th class="p-4 font-label-sm text-label-sm w-12 text-center">No</th><th class="p-4 font-label-sm text-label-sm">Tahun</th><th class="p-4 font-label-sm text-label-sm">Nama Penerima</th><th class="p-4 font-label-sm text-label-sm">Bidang Karya/Penerima Anugerah</th><th class="p-4 font-label-sm text-label-sm">Kategori Media</th><th class="p-4 font-label-sm text-label-sm">Kategori Acara</th></tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-sm"><tr class="hover:bg-surface-container-lowest transition-colors group"><td class="p-4 text-center text-on-surface-variant">1</td><td class="p-4 font-medium">2023</td><td class="p-4"><div class="font-medium text-primary group-hover:text-gold-accent transition-colors">Watchdoc Image</div></td><td class="p-4">Film Dokumenter Sosial</td><td class="p-4">Media Audio Visual</td><td class="p-4">Media Kebudayaan</td></tr><tr class="bg-surface-gray hover:bg-surface-container-lowest transition-colors group"><td class="p-4 text-center text-on-surface-variant">2</td><td class="p-4 font-medium">2023</td><td class="p-4"><div class="font-medium text-primary group-hover:text-gold-accent transition-colors">Harian Kompas</div></td><td class="p-4">Liputan Khusus Budaya Nusantara</td><td class="p-4">Media Cetak</td><td class="p-4">Jurnalistik Kebudayaan</td></tr><tr class="hover:bg-surface-container-lowest transition-colors group"><td class="p-4 text-center text-on-surface-variant">3</td><td class="p-4 font-medium">2022</td><td class="p-4"><div class="font-medium text-primary group-hover:text-gold-accent transition-colors">Radio Republik Indonesia</div></td><td class="p-4">Pelestarian Gending Jawa</td><td class="p-4">Media Radio</td><td class="p-4">Penyiaran Budaya</td></tr><tr class="bg-surface-gray hover:bg-surface-container-lowest transition-colors group"><td class="p-4 text-center text-on-surface-variant">4</td><td class="p-4 font-medium">2022</td><td class="p-4"><div class="font-medium text-primary group-hover:text-gold-accent transition-colors">Mojok.co</div></td><td class="p-4">Esai Budaya Populer</td><td class="p-4">Media Siber</td><td class="p-4">Media Baru</td></tr><tr class="hover:bg-surface-container-lowest transition-colors group"><td class="p-4 text-center text-on-surface-variant">5</td><td class="p-4 font-medium">2021</td><td class="p-4"><div class="font-medium text-primary group-hover:text-gold-accent transition-colors">Miles Films</div></td><td class="p-4">Sinema Identitas Nasional</td><td class="p-4">Media Film</td><td class="p-4">Karya Seni Media</td></tr></tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-4 border-t border-outline-variant bg-surface-gray flex justify-between items-center">
+<span class="text-sm text-on-surface-variant">Halaman 1 dari 29</span>
+<div class="flex gap-1">
+<button class="p-1.5 border border-outline-variant rounded bg-white text-outline disabled:opacity-50" disabled=""><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="px-3 py-1.5 border border-primary bg-primary text-white rounded text-sm font-medium">1</button>
+<button class="px-3 py-1.5 border border-outline-variant bg-white text-on-surface hover:bg-surface-container rounded text-sm font-medium transition-colors">2</button>
+<button class="px-3 py-1.5 border border-outline-variant bg-white text-on-surface hover:bg-surface-container rounded text-sm font-medium transition-colors">3</button>
+<span class="px-2 py-1.5 text-on-surface-variant">...</span>
+<button class="px-3 py-1.5 border border-outline-variant bg-white text-on-surface hover:bg-surface-container rounded text-sm font-medium transition-colors">125</button>
+<button class="p-1.5 border border-outline-variant rounded bg-white text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-primary text-gold-accent w-full py-12 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter border-t-4 border-gold-accent mt-auto">
+<div>
+<span class="font-headline-md text-headline-md text-white block mb-4">KEMENBUD</span>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">
+                Portal Referensi Kebudayaan Nasional. Mendokumentasikan dan mempublikasikan data kebudayaan untuk pelestarian dan pemajuan kebudayaan Indonesia.
+            </p>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-2">Tautan Penting</h3>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">Latar Belakang</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">FAQ</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">Hubungi Kami</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white hover:underline transition-all" href="#">Peta Situs</a>
+</div>
+<div class="flex flex-col gap-2 md:items-end md:text-right">
+<h3 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-2">Kontak</h3>
+<p class="font-body-md text-body-md text-surface-variant">Gedung E, Kompleks Kemdikbudristek<br>Jl. Jenderal Sudirman, Senayan<br>Jakarta 10270</p>
+<p class="font-body-md text-body-md text-surface-variant mt-4 opacity-80">© 2024 Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p>
+</div>
+</footer>
+
+
+</body></html>
