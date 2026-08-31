@@ -113,22 +113,77 @@
 </head>
 <body class="bg-background text-on-background min-h-screen flex flex-col">
 <!-- TopNavBar -->
-<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop h-20 bg-primary border-b-2 border-gold-accent flat no shadows">
-<div class="flex items-center gap-gutter">
-<span class="font-display-lg text-display-lg text-white tracking-tight">KEMENBUD</span>
-<div class="hidden md:flex gap-base ml-8">
-<a class="px-3 py-2 text-white opacity-90 hover:opacity-100 font-label-md text-label-md hover:text-gold-accent transition-colors duration-200" href="#">Beranda</a>
-<a class="px-3 py-2 text-white opacity-90 hover:opacity-100 font-label-md text-label-md hover:text-gold-accent transition-colors duration-200" href="#">Statistik</a>
-<a class="px-3 py-2 text-gold-accent border-b-2 border-gold-accent pb-1 font-label-md text-label-md hover:text-gold-accent transition-colors duration-200 scale-95 transition-transform duration-150" href="#">Data Program</a>
-<a class="px-3 py-2 text-white opacity-90 hover:opacity-100 font-label-md text-label-md hover:text-gold-accent transition-colors duration-200" href="#">Tentang</a>
-</div>
-</div>
-<div class="flex items-center gap-base">
-<button class="text-white hover:text-gold-accent transition-colors duration-200">
-<span class="material-symbols-outlined" data-icon="search">search</span>
-</button>
-<button class="bg-surface text-primary px-4 py-2 rounded font-label-md text-label-md hover:bg-surface-dim transition-colors">Masuk</button>
-</div>
+<nav class="bg-primary text-gold-accent sticky top-0 z-50 flex items-center w-full px-margin-mobile md:px-margin-desktop h-20 border-b-2 border-gold-accent relative">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-4">
+        <span class="font-display-lg text-display-lg text-white">KEMENBUD</span>
+    </div>
+
+    <!-- Menu Tengah -->
+    <ul class="hidden md:flex items-center gap-8 font-label-md text-label-md absolute left-1/2 -translate-x-1/2">
+
+        <!-- Beranda -->
+        <li>
+            <a href="index.html" class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">
+                Beranda
+            </a>
+        </li>
+
+        <!-- Statistik -->
+        <li>
+            <a href="statistik.html" class="text-white opacity-90 hover:opacity-100 hover:text-gold-accent transition-colors duration-200 cursor-pointer">
+                Statistik
+            </a>
+        </li>
+
+        <!-- Data Program -->
+       <li class="relative group cursor-pointer">
+    <div class="flex items-center gap-1 text-gold-accent border-b-2 border-gold-accent pb-1">
+                <span>Data Program</span>
+                <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+            </div>
+
+            <div class="absolute top-full left-0 mt-2 w-64 bg-primary border border-gold-accent rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div class="flex flex-col py-2">
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="mtn.html">
+                        Manajemen Talenta Nasional (MTN)
+                    </a>
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="bimtek.html">
+                        Bimtek Pelaku Budaya
+                    </a>
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="gbn.html">
+                        Gita Bahana Nusantara (GBN)
+                    </a>
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="aki.html">
+                        Anugerah Kebudayaan Indonesia (AKI)
+                    </a>
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="kelembagaan.html">
+                        Penguatan Kelembagaan
+                    </a>
+
+                    <a class="px-4 py-2 text-label-md text-white hover:bg-primary-container hover:text-gold-accent transition-colors" href="pemajuan-desa.html">
+                        Pemajuan Kebudayaan Desa
+                    </a>
+
+                </div>
+            </div>
+        </li>
+
+        <!-- Tentang -->
+        <li class="relative group cursor-pointer">
+            <a href="tentang.html" class="flex items-center gap-1 text-white opacity-90 group-hover:opacity-100 group-hover:text-gold-accent transition-colors duration-200">
+                <span>Tentang</span>
+            </a>
+        </li>
+
+    </ul>
+
 </nav>
 <!-- Main Content Canvas -->
 <main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12"><div class="w-full max-w-3xl mx-auto bg-surface-lowest border border-outline-variant rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden">
